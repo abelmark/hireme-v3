@@ -10,7 +10,12 @@ module.exports = (app) => {
   
   app.get("/auth/github/callback", passport.authenticate("github"));
 
-  app.get('api/current_user', (req, res) => {
+  app.get("/api/logout", (req, res) => {
+    req.logout();
+    res.send(req.user)
+  })
+
+  app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   })
 }
