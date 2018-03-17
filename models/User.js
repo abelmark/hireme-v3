@@ -8,7 +8,8 @@ const userSchema = new Schema({
   html_url: String,
   blog: String,
   location: String,
-  bio: String
-})
+  bio: String,
+  avatar_url: String
+});
 
 mongoose.model('users', userSchema);

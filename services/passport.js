@@ -22,12 +22,12 @@ passport.use(
     {
       clientID: keys.githubClientID,
       clientSecret: keys.githubClientSecret,
-      callbackURL: "/auth/github/callback",
+      callbackURL: "http://localhost:5000/auth/github/callback",
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
       const info = profile._json;
-      console.log(profile.id)
+      console.log('[profile]', profile)
       const existingUser = await User.findOne({ github_id: profile.id });
       console.log(existingUser ? existingUser : 'does not exist');
 
@@ -37,7 +37,7 @@ passport.use(
       }
 
       console.log('user created!')
-      const user = await new User({ name: info.name, login: info.login, github_id: info.id, html_url: info.html_url, blog: info.blog, location: info.location, bio: info.bio }).save();
+      const user = await new User({ name: info.name, login: info.login, github_id: info.id, html_url: info.html_url, blog: info.blog, location: info.location, bio: info.bio, avatar_url: info.avatar_url }).save();
       done(null, user);
     }
   )

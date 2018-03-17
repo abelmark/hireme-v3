@@ -1,0 +1,87 @@
+.Dashboard {
+  width: 100%;
+  height: auto;
+  padding-top: 3em;
+}
+
+.User {
+  height: 13em;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.User img {
+  max-height: 10em;
+  border-radius: 50%;
+}
+
+.lightgray {
+  color: lighten(gray, 20%);
+}
+
+.User__left,
+.User__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.User__right {
+  flex: 3;
+
+  & h3 {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+
+  & h4,
+  h5 {
+    font-size: 1em;
+  }
+}
+
+.User__right > * {
+  margin: 0 0 10px;
+}
+
+.User__left {
+  flex: 1;
+}
+
+.social_icon {
+  height: 0.5em;
+  margin-right: 0.5em;
+}
+
+.social_icon:hover {
+  background: white;
+}
+
+.Work {
+  display: flex;
+  flex-direction: row;
+  height: 30em;
+}
+
+.About,
+.Experience {
+  height: 100%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 0 2%;
+}
+
+.About {
+  flex: 1;
+  margin-right: 24px;
+}
+
+.Experience {
+  flex: 3;
+}
