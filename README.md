@@ -1,1 +1,3 @@
-# hireme-v3 REACT - NODE - MONGODB - EXPRESS
+# hireme-v3 
+
+# Built with React / Node
