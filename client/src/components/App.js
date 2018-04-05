@@ -4,6 +4,7 @@ import { fetchUser } from '../actions/index'
 
 import Header from './Header/Header'
 import Dashboard from './Dashboard/Dashboard'
+import Splash from './Splash/Splash'
 
 import styles from './App.module.css';
 
@@ -17,7 +18,7 @@ class App extends Component {
       <div className={styles.App}>
         <div className={styles.container}>
           <Header />
-          <Dashboard />
+          <Splash />
         </div>
       </div>
     )

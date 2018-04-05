@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const keys = require('./config/keys')
 require('./models/User');
 require('./services/passport')
-require('./services/mailchimp');
+// require('./services/mailchimp');
 
 mongoose.connect(keys.mongoURI);
 
