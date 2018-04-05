@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import { connect } from 'react-redux';
 import { fetchUser } from '../actions/index'
 

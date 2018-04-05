@@ -15,6 +15,7 @@ class Header extends Component {
         return (
           <li>
             <a href="/auth/github">Login</a>
+            <a href="/auth/linkedin">Login 2</a>
           </li>
         );
       default:

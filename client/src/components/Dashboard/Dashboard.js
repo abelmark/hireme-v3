@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import { fetchUser } from "../../actions/index";
 import { SocialIcon } from "react-social-icons";
 
+import Splash from '../Splash/Splash'
+
 import styles from "./dashboard.module.scss";
-import icons from "glyphicons";
 
 class Dashboard extends Component {
   renderIcons() {
@@ -31,8 +32,8 @@ class Dashboard extends Component {
   renderDashboard() {
     if (!this.props.user) {
       return (
-        <section className={styles.Dashboard}>
-          <div>You ain't logged in</div>
+        <section>
+          <Splash />
         </section>
       )
     } else {

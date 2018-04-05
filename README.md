@@ -1,3 +1,3 @@
-# hireme-v3 
+# HireMe - v3 
 
 # Built with React / Node
