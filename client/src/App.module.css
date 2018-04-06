@@ -2,7 +2,10 @@
 @import url("./styles/app.scss");
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  font-family: "League Gothic";
+  background: #F2F2F2;
+}
+
+.container {
+  padding: 0 15%;
 }

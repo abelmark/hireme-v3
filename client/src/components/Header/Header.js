@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchUser } from "../../actions/index";
 import Aux from '../../hoc/Aux';
 
-import styles from './header.module.css';
+import styles from './header.module.scss';
 
 
 class Header extends Component {

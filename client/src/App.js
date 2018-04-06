@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchUser } from '../actions/index'
+import { fetchUser } from './actions/index'
 
-import Header from './Header/Header'
-import Dashboard from './Dashboard/Dashboard'
-import Splash from './Splash/Splash'
+import Header from './components/Header/Header'
+import Dashboard from './components/Dashboard/Dashboard'
+import Splash from './components/Splash/Splash'
+import Loader from './components/Loader/Loader'
 
 import styles from './App.module.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      loading: true
+    }
+  }
+
   componentDidMount(){
-    this.props.fetchUser(); 
+    this.props.fetchUser();
+    setTimeout(() => {
+      this.setState({
+        loading: false
+      })
+    }, 2000)
   }
 
   render() {
+    if(this.state.loading){
+      return (
+        <Loader />
+      )
+    }
+
     return (
       <div className={styles.App}>
         <div className={styles.container}>

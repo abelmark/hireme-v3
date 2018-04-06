@@ -5,8 +5,45 @@
   justify-content: center;
   align-items: center;
 
+  & h1 {
+    font-size: 4em;
+  }
+
+  &__image {
+    max-height: 14em;
+    height: 14em;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+
+    & img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
   & form{
     display: flex;
     flex-direction: column;
+
+    & * {
+      margin-bottom: 16px;
+    }
+
+    & input {
+      text-align: center;
+      border-radius: none;
+      height: 2em;
+    }
+
+    & button {
+      background: white;
+      font-weight: 900;
+      height: 2em;
+    }
+  }
+
+  & label {
+    font-size: 3em;
   }
 }

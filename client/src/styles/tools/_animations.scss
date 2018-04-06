@@ -1,0 +1,32 @@
+//
+// Animations
+//
+@keyframes black-to-alpha {
+  0% {
+    background-color: $color-black;
+  }
+  100% {
+    background-color: $color-alpha;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//
+// Animation Classes
+//
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
