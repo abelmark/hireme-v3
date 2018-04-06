@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { withRouter } from 'react-router-dom';
+import * as actions from '../../actions';
 
 import styles from "./splash.module.scss";
 import businessman from "../../assets/images/businessman.png";
@@ -12,17 +13,6 @@ class Splash extends Component {
     };
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-
-    const email = this.state.value;
-
-    axios.post("http://localhost:5000/api/memberlist", { email }).then(res => {
-      console.log(res);
-      console.log(res.data);
-    });
-  };
-
   handleChange = e => {
     this.setState({ value: e.target.value });
   }
@@ -32,9 +22,9 @@ class Splash extends Component {
       <div className={styles.Splash}>
         <h1>GET NOTIFIED WHEN WE LAUNCH</h1>
         <div className={styles.Splash__image}>
-          <img src={businessman} />
+          <img src={businessman} alt="Business Man"/>
         </div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={() => actions.submitEmail(this.state.value, this.props.history)}>
           <label htmlFor="email">FIND JOBS. GET HIRED.</label>
           <input
             type="email"
@@ -51,4 +41,4 @@ class Splash extends Component {
   }
 }
 
-export default Splash;
+export default withRouter(Splash);

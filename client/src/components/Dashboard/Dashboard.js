@@ -42,7 +42,7 @@ class Dashboard extends Component {
           <div className={styles.User}>
             <div className={styles.User__left}>
               <figure>
-                <img src={this.props.user.avatar_url} />
+                <img src={this.props.user.avatar_url} alt="Profile Avatar"/>
               </figure>
             </div>
             <div className={styles.User__right}>

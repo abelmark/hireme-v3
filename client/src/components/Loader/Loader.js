@@ -1,7 +1,4 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { fetchUser } from "../../actions/index";
-import Aux from "../../hoc/Aux";
+import React from "react";
 
 import styles from "./loader.module.scss";
 
