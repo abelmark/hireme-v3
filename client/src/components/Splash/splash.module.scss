@@ -34,7 +34,7 @@
       font-family: "League Gothic";
       text-align: center;
       border-radius: none;
-      height: 2em;
+      height: 2.2em;
       letter-spacing: 1px;
     }
 
@@ -45,12 +45,15 @@
       color: white;
       height: 2em;
       letter-spacing: 1px;
-      font-size: 1.2em;
-      transition: all .5s ease-in-out;
+      font-size: 1.4em;
+      
+      & p {
+        transition: all .3s ease-in-out;
+        margin: 0;
+      }
 
-      &:hover{
-        background-color: white;
-        color: black;
+      &:hover p{
+        transform: scale(1.2);
       }
     }
   }

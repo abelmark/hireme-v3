@@ -2,6 +2,8 @@
 
 A job board for developers, by developers
 
+![alt text](https://imgur.com/a/PlFd0)
+
 ## Getting Started
 
 Fork the repository into a folder of your choosing.
