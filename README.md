@@ -2,6 +2,8 @@
 
 A job board for developers, by developers
 
+![Screenshot](screenshot.png)
+
 ## Getting Started
 
 Fork the repository into a folder of your choosing.
