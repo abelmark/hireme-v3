@@ -35,11 +35,11 @@ if (process.env.NODE_ENV === "production") {
   // recoginize the route
   const path = require("path");
   app.get("*", (req, res) => {
-    res.sendfile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
-let PORT = (process.env.PORT || 5000);
+const PORT = (process.env.PORT || 5000);
 app.listen(PORT, () => {
   console.log(`You are listening to the smooth sounds of port ${PORT}`)
 });
