@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  letter-spacing: 1px;
 
   & h1 {
     font-size: 4em;
@@ -35,7 +36,7 @@
       text-align: center;
       border-radius: none;
       height: 2.2em;
-      letter-spacing: 1px;
+      letter-spacing: 2.2px;
     }
 
     & button {
