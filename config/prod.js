@@ -1,6 +1,6 @@
 // Production - Careful with the keys here bb
 module.exports = {
-  githubClientID: process.env.GITHUB_CLIENT_ID,
+  githubClientId: process.env.GITHUB_CLIENT_ID,
   githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
   linkedInClientID: process.env.LINKEDIN_CLIENT_ID,
   linkedInClientSecret: process.env.LINKEDIN_CLIENT_SECRET,
