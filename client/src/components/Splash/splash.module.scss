@@ -22,44 +22,4 @@
       max-height: 100%;
     }
   }
-
-  & form{
-    display: flex;
-    flex-direction: column;
-
-    & * {
-      margin-bottom: 16px;
-    }
-
-    & input {
-      font-family: "League Gothic";
-      text-align: center;
-      border-radius: none;
-      height: 2.2em;
-      letter-spacing: 2.2px;
-    }
-
-    & button {
-      font-weight: 900;
-      font-family: "League Gothic";
-      background-color: black;
-      color: white;
-      height: 2em;
-      letter-spacing: 1px;
-      font-size: 1.4em;
-      
-      & p {
-        transition: all .3s ease-in-out;
-        margin: 0;
-      }
-
-      &:hover p{
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  & label {
-    font-size: 3em;
-  }
 }

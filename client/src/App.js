@@ -29,11 +29,11 @@ class App extends Component {
   }
 
   render() {
-    if(this.state.loading){
-      return (
-        <Loader />
-      )
-    }
+    // if(this.state.loading){
+    //   return (
+    //     <Loader />
+    //   )
+    // }
 
     return (
       <BrowserRouter>

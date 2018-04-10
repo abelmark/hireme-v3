@@ -6,11 +6,16 @@ import reduxThunk from 'redux-thunk';
 
 import './index.css';
 import App from './App';
-import reducers from './reducers';
+import reducers from './reducers/index';
 import axios from 'axios';
 window.axios = axios;
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const store = createStore(
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(reduxThunk)
+);
+console.log('[store]', store)
 
 const rootEl = document.getElementById("root");
 
@@ -23,10 +28,9 @@ ReactDOM.render(
 
 if (module.hot) {
   module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
     ReactDOM.render(
       <Provider store={store}>
-        <NextApp />
+        <App />
       </Provider>, 
       rootEl);
   })
