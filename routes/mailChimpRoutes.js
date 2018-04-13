@@ -20,6 +20,7 @@ module.exports = app => {
   });
 
   app.post("/api/memberList", (req, res) => {
+    console.log('req body', req.body)
     mailchimp
       .post(`/lists/${list_id}/members`, {
         email_address: req.body.email,

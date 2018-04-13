@@ -1,4 +1,4 @@
-import _ from "lodash";
+// import _ from "lodash";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchUser } from "../../actions/index";
@@ -9,11 +9,11 @@ import styles from "./dashboard.module.scss";
 
 class Dashboard extends Component {
   renderIcons() {
-    const urls = [
-      "http://www.markaabel.com",
-      "http://www.github.com/abelmark",
-      "http://www.linkedin.com/in/markabelseattle"
-    ];
+    // const urls = [
+    //   "http://www.markaabel.com",
+    //   "http://www.github.com/abelmark",
+    //   "http://www.linkedin.com/in/markabelseattle"
+    // ];
 
     // return _.map(urls, url => {
     //   console.log(url);

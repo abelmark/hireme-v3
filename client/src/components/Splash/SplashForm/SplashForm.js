@@ -1,48 +1,58 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 
 import * as actions from "../../../actions";
 
 import styles from "./splashform.module.scss";
 
-const SplashForm = props => {
-  const {
-    handleSubmit,
-    pristine,
-    reset,
-    submitting,
-    history,
-    submitEmail,
-    emailList,
-    form
-  } = props;
-  return (
-    <div className={styles.Splash}>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>FIND JOBS. GET HIRED</label>
+class SplashForm extends Component {
+  render() {
+    const {
+      handleSubmit,
+      pristine,
+      submitting,
+      history,
+      addEmail
+    } = this.props;
+
+    let email = 'abelmarka@gmail.com'
+    return (
+      <div className={styles.Splash}>
+        <form onSubmit={() => addEmail(email, history)}>
           <div>
-            <Field
-              name="email"
-              component="input"
-              type="email"
-              placeholder="Enter Your E-mail"
-            />
+            <label>FIND JOBS. GET HIRED</label>
+            <div>
+              <Field
+                name="email"
+                component="input"
+                type="email"
+                placeholder="Enter Your E-mail"
+              />
+            </div>
           </div>
-        </div>
-        <button
-          className="btn"
-          type="submit"
-          disabled={pristine || submitting}
-          onClick={() => submitEmail(form.emailList, history)}
-        >
-          HIT IT!
-        </button>
-      </form>
-    </div>
-  );
+          <button
+            className="btn"
+            type="submit"
+            disabled={pristine || submitting}
+          >
+            HIT IT!
+          </button>
+        </form>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    email: state.form.emailList
+  };
 };
 
-export default reduxForm({
+
+SplashForm = reduxForm({
   form: "emailList"
 })(SplashForm);
+
+export default connect(mapStateToProps, actions)(SplashForm);

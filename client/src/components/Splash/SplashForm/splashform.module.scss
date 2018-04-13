@@ -1,9 +1,14 @@
 .Splash {
+  
   & form {
     display: flex;
     flex-direction: column;
-    & * {
+
+    & > * {
       margin-bottom: 16px;
+      @media(max-width: 768px){
+
+      }
     }
     & input {
       font-family: "League Gothic";
@@ -32,6 +37,10 @@
   
   & label {
     font-size: 3em;
+
+    @media(max-width: 768px){
+      font-size: 2em;
+    }
   }
 
   & Field {

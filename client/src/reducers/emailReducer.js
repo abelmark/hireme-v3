@@ -6,6 +6,7 @@ export default function(state = [], action) {
       console.log("ADDING E-MAIL", action.payload);
       return action.payload || false;
     default:
+      console.log("hit default for some reason");
       return state;
   }
 }

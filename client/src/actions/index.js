@@ -6,9 +6,10 @@ export const fetchUser = () => async dispatch => {
   dispatch({ type: FETCH_USER, payload: res.data });
 };
 
-export const submitEmail = (email, history) => async dispatch => {
+export const addEmail = (email, history) => async dispatch => {
   console.log('[email]', email)
-  const res = await axios.post("/api/memberlist", email);
+  console.log('[action]', ADD_EMAIL)
+  const res = await axios.post("/api/memberlist", {email: email});
 
   history.push('/thankyou');
 
