@@ -7,8 +7,7 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const addEmail = (email, history) => async dispatch => {
-  console.log('[email]', email)
-  console.log('[action]', ADD_EMAIL)
+  console.log('[history in actions]', history);
   const res = await axios.post("/api/memberlist", {email: email});
 
   history.push('/thankyou');

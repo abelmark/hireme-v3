@@ -13,13 +13,14 @@ class SplashForm extends Component {
       pristine,
       submitting,
       history,
-      addEmail
+      addEmail,
+      email
     } = this.props;
 
-    let email = 'abelmarka@gmail.com'
+    console.log('[email]', email );
     return (
       <div className={styles.Splash}>
-        <form onSubmit={() => addEmail(email, history)}>
+        <form onSubmit={() => addEmail(email.values.email, history)}>
           <div>
             <label>FIND JOBS. GET HIRED</label>
             <div>
