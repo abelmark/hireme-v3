@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
+import { withRouter } from "react-router-dom";
 
 import * as actions from "../../../actions";
 
@@ -20,7 +21,7 @@ class SplashForm extends Component {
     console.log('[email]', email );
     return (
       <div className={styles.Splash}>
-        <form onSubmit={() => addEmail(email.values.email, history)}>
+        <form onSubmit={() => addEmail(email.values.email)}>
           <div>
             <label>FIND JOBS. GET HIRED</label>
             <div>
@@ -56,4 +57,4 @@ SplashForm = reduxForm({
   form: "emailList"
 })(SplashForm);
 
-export default connect(mapStateToProps, actions)(SplashForm);
+export default connect(mapStateToProps, actions)(withRouter(SplashForm));

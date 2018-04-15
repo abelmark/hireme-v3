@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { fetchUser } from './actions/index'
 
 import Header from './components/Header/Header'
@@ -9,6 +9,7 @@ import Splash from './components/Splash/Splash'
 import Loader from './components/Loader/Loader'
 import ThankYou from './components/ThankYou/ThankYou'
 
+import history from "./history/history";
 import styles from './App.module.css';
 
 class App extends Component {
@@ -36,14 +37,14 @@ class App extends Component {
     // }
 
     return (
-      <BrowserRouter>
+      <Router history={history}>
         <div className={styles.App}>
           <div className={styles.container}>
             <Route exact path="/" component={Splash} />
             <Route path="/thankyou" component={ThankYou} />
           </div>
         </div>
-      </BrowserRouter>
+      </Router>
     )
   }
 }

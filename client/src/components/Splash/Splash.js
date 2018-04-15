@@ -44,4 +44,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(Splash));
+export default connect(mapStateToProps)(withRouter(Splash));
