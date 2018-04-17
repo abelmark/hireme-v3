@@ -17,11 +17,9 @@ class SplashForm extends Component {
       addEmail,
       email
     } = this.props;
-
-    console.log('[email]', email );
     return (
       <div className={styles.Splash}>
-        <form onSubmit={() => addEmail(email.values.email)}>
+        <form onSubmit={handleSubmit}>
           <div>
             <label>FIND JOBS. GET HIRED</label>
             <div>
@@ -29,7 +27,7 @@ class SplashForm extends Component {
                 name="email"
                 component="input"
                 type="email"
-                placeholder="Enter Your E-mail"
+                placeholder="ENTER YOUR E-MAIL"
               />
             </div>
           </div>
@@ -37,8 +35,9 @@ class SplashForm extends Component {
             className="btn"
             type="submit"
             disabled={pristine || submitting}
+            onClick={() => addEmail(email.values.email, history)}
           >
-            HIT IT!
+            <p>HIT IT!</p>
           </button>
         </form>
       </div>
@@ -51,7 +50,6 @@ const mapStateToProps = state => {
     email: state.form.emailList
   };
 };
-
 
 SplashForm = reduxForm({
   form: "emailList"

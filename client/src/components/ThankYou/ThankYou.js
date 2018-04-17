@@ -1,9 +1,12 @@
 import React from 'react';
 
+import styles from './thankyou.module.scss';
+
 const ThankYou = () => {
   return (
-    <div>
-      <h1>THANK YOU!</h1>
+    <div className={styles.ThankYou}>
+      <h1>THANK YOU FOR JOINING OUR LIST!</h1>
+      <h3>WE'LL BE IN TOUCH</h3>
     </div>
   )
 }

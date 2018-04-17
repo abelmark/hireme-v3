@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
-import * as actions from "../../actions";
 
 import SplashForm from './SplashForm/SplashForm';
 
@@ -21,11 +20,6 @@ class Splash extends Component {
   };
 
   render() {
-    const { value } = this.state;
-    const { history } = this.props;
-    console.log('[history]', history);
-    console.log('[form value]', value);
-
     return (
       <div className={styles.Splash}>
         <h1>GET NOTIFIED WHEN WE LAUNCH</h1>

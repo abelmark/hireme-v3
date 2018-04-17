@@ -15,7 +15,6 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(reduxThunk)
 );
-console.log('[store]', store)
 
 const rootEl = document.getElementById("root");
 
