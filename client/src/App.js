@@ -39,8 +39,10 @@ class App extends Component {
     return (
       <Router history={history} forceRefresh={true}>
         <div className={styles.App}>
+          <Header />
           <div className={styles.container}>
-            <Route exact path="/" component={Splash} />
+            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/splash" component={Splash} />
             <Route path="/thankyou" component={ThankYou} />
           </div>
         </div>

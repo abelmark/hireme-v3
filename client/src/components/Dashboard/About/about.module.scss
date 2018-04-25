@@ -1,0 +1,11 @@
+.about{
+  box-sizing: border-box;
+  position: relative;
+  & > * {
+    list-style-type: none;
+  }
+
+  & ul {
+    padding-left: 0;
+  }
+}

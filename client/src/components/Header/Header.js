@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import { fetchUser } from "../../actions/index";
-import Aux from '../../hoc/Aux';
+import Aux from "../../hoc/Aux";
 
-import styles from './header.module.scss';
-
+import styles from "./header.module.scss";
 
 class Header extends Component {
   renderContent() {
@@ -13,38 +12,46 @@ class Header extends Component {
         return;
       case false:
         return (
-          <li>
-            <a href="/auth/github">Login</a>
-            <a href="/auth/linkedin">Login 2</a>
-          </li>
+          <ul>
+            <li>
+              <a href="/auth/github">Login</a>
+            </li>
+            {/* <li>
+              <a href="/auth/linkedin">Login 2</a>
+            </li> */}
+          </ul>
         );
       default:
         return (
           <Aux>
-            <li key="1" style={{ margin: "0 10px" }}>
-              User: {this.props.auth.name}
-            </li>
-            <li key="2">
-              <a href="/api/logout">Logout</a>
-            </li>
+            <ul>
+              <li key="1" style={{ margin: "0 10px" }}>
+                User: {this.props.auth.name}
+              </li>
+              <li key="2">
+                <a href="/api/logout">Logout</a>
+              </li>
+            </ul>
           </Aux>
-        )
+        );
     }
   }
 
   render() {
-    return <nav className={styles.navbar}>
+    return (
+      <nav className={styles.navbar}>
         <div>Hire.me</div>
         <div>
           <ul>{this.renderContent()}</ul>
         </div>
-      </nav>;
+      </nav>
+    );
   }
 }
 
-function mapStateToProps({ auth }){
-  console.log('[auth]', auth)
+function mapStateToProps({ auth }) {
+  console.log("[auth]", auth);
   return { auth };
 }
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(Header);
