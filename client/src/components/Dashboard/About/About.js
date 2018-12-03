@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
+import Field from '../Field/Field';
+// import { connect } from "react-redux";
+// import { Field, reduxForm } from "redux-form";
 
-import * as actions from "../../../actions"
+// import * as actions from "../../../actions"
 
 import styles from "./about.module.scss";
 
@@ -13,32 +14,41 @@ class About extends Component {
         <ul>
           <li>
             <h3>Professional Experience</h3>
-            <p>2-4 years</p>
+            <Field 
+              value='1 to 2 years'
+            />
           </li>
           <li>
             <h3>Contract</h3>
-            <p>Full-time</p>
+            <Field
+              value="Full-time"
+            />
           </li>
           <li>
             <h3>Earliest Start Date</h3>
-            <p>04.28.18</p>
+            <Field 
+              value="Dec. 31st 2018"
+            />
           </li>
           <li>
             <h3>US Work Permit</h3>
-            <p>Yes</p>
+            <Field 
+              value="Yes"
+            />
           </li>
           <li>
             <h3>Wants to work in (salary)</h3>
             <ul>
-              <li>Los Angeles <span>$85,000</span></li>
-              <li>Seattle <span>$85,000</span></li>
-              <li>New York <span>$85,000</span></li>
-              <li>San Francisco <span>$85,000</span></li>
+              <Field 
+                value={['New York', 'Los Angeles', 'Seattle']}
+              />
             </ul>
           </li>
           <li>
             <h3>Languages</h3>
-            <p>English<span>(fluent)</span></p>
+            <Field 
+              value="English (fluent)"
+            />
           </li>
         </ul>
       </section>

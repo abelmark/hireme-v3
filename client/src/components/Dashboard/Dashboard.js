@@ -9,25 +9,6 @@ import About from './About/About';
 import styles from "./dashboard.module.scss";
 
 class Dashboard extends Component {
-  renderIcons() {
-    // const urls = [
-    //   "http://www.markaabel.com",
-    //   "http://www.github.com/abelmark",
-    //   "http://www.linkedin.com/in/markabelseattle"
-    // ];
-
-    // return _.map(urls, url => {
-    //   console.log(url);
-    //   return (
-    //     <SocialIcon
-    //       className={styles.social_icon}
-    //       color="black"
-    //       style={{ height: 25, width: 25 }}
-    //       url={url}
-    //     />
-    //   );
-    // });
-  }
 
   renderDashboard() {
     if (!this.props.user) {
