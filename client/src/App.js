@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Router, Route } from 'react-router-dom';
 import { fetchUser } from './actions/index'
+import './styles/app.scss';
 
 import Header from './components/Header/Header'
 import Dashboard from './components/Dashboard/Dashboard'
