@@ -16,9 +16,6 @@ class Header extends Component {
             <li>
               <a href="/auth/github">Login</a>
             </li>
-            {/* <li>
-              <a href="/auth/linkedin">Login 2</a>
-            </li> */}
           </ul>
         );
       default:
